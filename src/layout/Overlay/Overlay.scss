@@ -1,0 +1,31 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+    overflow: auto;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: opacity .15s .05s $bezier, visibility .15s .05s;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.-open-modal {
+    overflow: hidden;
+
+    .overlay {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .15s $bezier, visibility .15s;
+    }
+}

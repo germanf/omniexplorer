@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  cursor: default;
+  color: #555;
+  background-color: #F4F4F4;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+
+.space-top {
+  padding-top: 20px;
+
+  &-half {
+      padding-top: 10px;
+  }
+}
+
+.space-bottom {
+  padding-bottom: 20px;
+
+  &-half {
+      padding-bottom: 10px;
+  }
+}
+
+.page {
+  h1 {
+    text-align: center;
+    padding: 50px 0 25px;
+  }
+
+  form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 25px;
+  }
+}
+
+
+.error {
+  color: #DD0000;
+  text-align: center;
+}
+
+.success {
+  color: blue;
+  text-align: center;
+}

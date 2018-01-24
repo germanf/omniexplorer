@@ -1,0 +1,20 @@
+// fonts
+$font-family: 'Roboto', Helvetica, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.5;
+
+// colors
+$dark-grey: #333447;
+$dark-gray: #333447; // for the Americans
+
+// Grid
+$width: 100%;
+$gutter: 0%;
+$breakpoint-small: 540px; // 540px
+$breakpoint-med: 720px; // 720px
+$breakpoint-large: 960px; // 960px
+
+
+$bezier: cubic-bezier(0.55, 0, 0.1, 1);

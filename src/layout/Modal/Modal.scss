@@ -1,0 +1,41 @@
+.modal {
+    padding: 25px;
+    width: 380px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 10px;
+
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin: 50px 0;
+    transform: scale(.9);
+    opacity: 0;
+
+    transition: opacity .15s 1s $bezier, transform .15s 1s $bezier;
+
+
+    h3 {
+        font-weight: $font-weight-regular;
+    }
+
+    a.close-modal {
+        float: right;
+        color: #DD0000;
+        cursor: pointer;
+        padding: 10px;
+        margin: -20px -15px 0 0;
+
+        span {
+            font-size: 10px;
+        }
+    }
+}
+
+.-open-modal {
+    .modal {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity .15s $bezier, transform .15s $bezier;
+    }
+}

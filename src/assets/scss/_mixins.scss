@@ -1,0 +1,39 @@
+// Utils
+@mixin show-module(){
+    max-height: 100%;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    overflow: visible;
+    opacity: 1;
+    transition: transform .2s $bezier, opacity .2s $bezier, visibility .2s $bezier, max-height .2s .0s $bezier;
+}
+
+@mixin hide-module(){
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transform: translate3d(0, 25px, 0);
+    transition: transform .2s $bezier, opacity .2s $bezier, visibility .2s $bezier, overflow .2s $bezier, max-height .0s .2s $bezier;
+}
+
+
+
+// Responsive
+@mixin screen-small(){
+    @media only screen and (min-width: $breakpoint-small) {
+        @content;
+    }
+}
+
+@mixin screen-med(){
+    @media only screen and (min-width: $breakpoint-med) {
+        @content;
+    }
+}
+
+@mixin screen-large(){
+    @media only screen and (min-width: $breakpoint-large) {
+        @content;
+    }
+}
