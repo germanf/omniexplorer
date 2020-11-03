@@ -15,10 +15,10 @@ import { ECOSYSTEM_PROD_NAME, ECOSYSTEM_TEST_NAME, TXS_CLASS_AB } from 'containe
 
 import DarkModeToggle from 'components/DarkModeToggle';
 import MenuButton from 'components/MenuButton';
+import menuReducer, { initialState } from 'components/Menu/reducer';
 
 import isTestnet from 'utils/isTestnet';
 import { toggleDisabledTestnet } from './actions';
-import menuReducer, { initialState } from 'components/Menu/reducer';
 
 import './menu.scss';
 import './switch.scss';
@@ -176,7 +176,9 @@ function Menu(props) {
             <NavLink href={`${getSufixURL()}/activations`}>
               Feature Activations
             </NavLink>
-            {/*  <NavLink href="/exchange">Exchange</NavLink> */}
+            {testnet &&
+              <NavLink href={`${getSufixURL()}/exchange`}>Exchange</NavLink>
+            }
             {/*  <NavLink href="/analytics">Analytics</NavLink> */}
             <NavLink
               href="https://github.com/OmniLayer/omniexplorer/wiki/OmniExplorer-FAQ"
