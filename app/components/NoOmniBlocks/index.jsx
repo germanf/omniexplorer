@@ -15,7 +15,7 @@ const StyledH3 = styled.h3`
 `;
 
 function NoOmniBlocks() {
-  let secondaryMessage = messages.secondaryOE;
+  const secondaryMessage = messages.secondaryOE;
 
   return (
     <StyledH3 className="lead text-center">
